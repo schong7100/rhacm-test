@@ -20,6 +20,6 @@ spec:
     protocol: TCP
     targetPort: 8778
   selector:
-    app: eap72-samples
+    deploymentconfig: eap72-samples
   sessionAffinity: None
   type: ClusterIP
