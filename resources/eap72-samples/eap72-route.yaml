@@ -3,7 +3,7 @@ kind: Route
 metadata:
   annotations:
   labels:
-    app: test
+    app: eap72-samples
   name: eap72-samples
   namespace: eap72-samples
 spec:
