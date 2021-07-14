@@ -14,3 +14,8 @@ spec:
     placementRef:
       kind: PlacementRule
       name: cluster-tst
+    overrides:
+    - clusterName: "/"
+      clusterOverrides:
+      - path: "metadata.namepsace"
+        value: user-test1

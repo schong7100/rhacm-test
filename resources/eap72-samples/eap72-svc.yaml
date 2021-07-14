@@ -5,7 +5,6 @@ metadata:
   labels:
     app: eap72-samples
   name: eap72-samples
-  namespace: eap72-samples
 spec:
   ports:
   - name: 8080-tcp

@@ -5,7 +5,6 @@ metadata:
     app.kubernetes.io/instance: test
     app.kubernetes.io/name: jboss-eap72-openshift
   name: test
-  namespace: acm-test
 spec:
   replicas: 1
   revisionHistoryLimit: 10
