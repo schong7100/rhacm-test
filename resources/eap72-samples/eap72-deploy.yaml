@@ -2,14 +2,13 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
   annotations:
-    app.kubernetes.io/instance: test
     app.kubernetes.io/name: jboss-eap72-openshift
-  name: test
+  name: eap72-samples
 spec:
   replicas: 1
   revisionHistoryLimit: 10
   selector:
-    deploymentconfig: test
+    deploymentconfig: eap72-samples
   strategy:
     activeDeadlineSeconds: 21600
     resources: {}
@@ -22,16 +21,13 @@ spec:
     type: Rolling
   template:
     metadata:
-      annotations:
-        openshift.io/generated-by: OpenShiftNewApp
-      creationTimestamp: null
       labels:
-        deploymentconfig: test
+        deploymentconfig: eap72-samples
     spec:
       containers:
       - image: image-registry.openshift-image-registry.svc:5000/openshift/jboss-eap72-openshift@sha256:464e00edbf44d91820b9d9e95edbe6c68e075b85158f60e3d2298d94c9ec56b0
         imagePullPolicy: Always
-        name: test
+        name: eap72-samples
         ports:
         - containerPort: 8778
           protocol: TCP
@@ -53,7 +49,7 @@ spec:
   - imageChangeParams:
       automatic: true
       containerNames:
-      - test
+      - eap72-samples
       from:
         kind: ImageStreamTag
         name: eap72-samples:latest
