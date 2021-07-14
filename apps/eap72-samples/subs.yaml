@@ -1,0 +1,16 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: eap72-samples-test1
+  namespace: user-test1
+  labels:
+    app: eap72-samples-test1
+  annotations:
+    apps.open-cluster-management.io/github-path: resources/ldcc-test
+    apps.open-cluster-management.io/git-branch: main
+spec:
+  channel: user-test1/eap72-samples-latest
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: test1-cluster

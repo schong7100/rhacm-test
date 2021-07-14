@@ -23,7 +23,7 @@ spec:
             - default
             - multicluster-endpoint
             include:
-            - ldcc-*
+            - '*'
           object-templates:
             - complianceType: musthave
               objectDefinition:

@@ -2,7 +2,7 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
-  name: policy-certificate-test1
+  name: policy-certificate
   namespace: rhacm-policies
 spec:
   remediationAction: inform
@@ -25,10 +25,10 @@ spec:
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
-  name: certificate-placement-binding-test1
+  name: certificate-placement-binding
   namespace: rhacm-policies
 placementRef:
-  name: cluster-test1
+  name: local-cluster
   kind: PlacementRule
   apiGroup: apps.open-cluster-management.io
 subjects:

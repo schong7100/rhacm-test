@@ -1,0 +1,8 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: eap72-sample-test1
+  namespace: user-test1
+spec:
+  type: GitHub
+  pathname: https://github.com/schong7100/rhacm-labs.git

@@ -1,7 +1,7 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: cluster-test1
+  name: local-cluster
   namespace: rhacm-policies
 spec:
   clusterConditions:
@@ -9,7 +9,7 @@ spec:
     status: "True"
   clusterSelector:
     matchExpressions:
-      - key: cluster
+      - key: local-cluster
         operator: In
         values: 
-        - "test1"
+        - "true"
