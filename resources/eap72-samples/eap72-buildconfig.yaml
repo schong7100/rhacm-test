@@ -19,6 +19,7 @@ spec:
       from:
         kind: ImageStreamTag
         name: jboss-eap72-openshift:latest
+        namespace: openshift
     type: Source
   successfulBuildsHistoryLimit: 5
   triggers:
