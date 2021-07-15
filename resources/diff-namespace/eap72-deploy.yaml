@@ -4,7 +4,7 @@ metadata:
   annotations:
     app.kubernetes.io/name: jboss-eap72-openshift
   name: eap72-samples
-  namespace: acm-demo-user2
+  namespace: acm-demo-user1
 spec:
   replicas: 1
   revisionHistoryLimit: 10

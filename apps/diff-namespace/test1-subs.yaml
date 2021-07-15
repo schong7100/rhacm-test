@@ -9,7 +9,7 @@ metadata:
     apps.open-cluster-management.io/github-path: resources/diff-namespace
     apps.open-cluster-management.io/git-branch: main
 spec:
-  channel: eap72-samples/eap72-sample-tst
+  channel: acm-test1/eap72-sample-tst
   placement:
     placementRef:
       kind: PlacementRule

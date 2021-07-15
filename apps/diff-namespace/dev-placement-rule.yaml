@@ -7,4 +7,3 @@ spec:
   clusterSelector:
     matchLabels:
       cluster: tst
-      name: cluster-tst

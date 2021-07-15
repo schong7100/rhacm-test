@@ -5,7 +5,7 @@ metadata:
   labels:
     app: eap72-samples
   name: eap72-samples
-  namespace: acm-demo-user2
+  namespace: acm-demo-user1
 spec:
   lookupPolicy:
     local: false

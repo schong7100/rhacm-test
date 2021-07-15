@@ -13,4 +13,4 @@ spec:
     - key: app
       operator: In
       values:
-      - eap72-samples-tst
+      - diff-namespace
