@@ -1,0 +1,16 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: diff-namespace
+  namespace: acm-test1
+  labels:
+    app: diff-namespace
+  annotations:
+    apps.open-cluster-management.io/github-path: resources/diff-namespace
+    apps.open-cluster-management.io/git-branch: main
+spec:
+  channel: acm-test1/eap72-sample-tst
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: cluster-tst

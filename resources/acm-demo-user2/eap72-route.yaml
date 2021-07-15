@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+  labels:
+    app: eap72-samples
+  name: eap72-samples
+  namespace: acm-demo-user2
+spec:
+  host: eap72-samples-ldcc.apps.tst.l-cloud.local
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: eap72-samples
+    weight: 100
+  wildcardPolicy: None
