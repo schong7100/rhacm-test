@@ -1,0 +1,36 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  annotations:
+  labels:
+    app: eap72-samples
+  name: eap72-samples
+  namespace: acm-demo-user2
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: eap72-samples:latest
+  source:
+    git:
+      uri: https://github.com/schong7100/eap72-samples.git
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: jboss-eap72-openshift:latest
+        namespace: openshift
+    type: Source
+  successfulBuildsHistoryLimit: 5
+  triggers:
+  - github:
+      secret: R3GG4mP-HWkFOexoipPO
+    type: GitHub
+  - generic:
+      secret: XEfPjpkJBalVSpHpz7j9
+    type: Generic
+  - type: ConfigChange
+  - imageChange:
+      lastTriggeredImageID: registry.access.redhat.com/jboss-eap-7/eap72-openshift@sha256:464e00edbf44d91820b9d9e95edbe6c68e075b85158f60e3d2298d94c9ec56b0
+    type: ImageChange
