@@ -2,7 +2,7 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
-  name: policy-certificate-test1
+  name: policy-certificate-tst
   namespace: rhacm-policies
 spec:
   remediationAction: inform
@@ -20,18 +20,18 @@ spec:
             exclude: []
           remediationAction: inform
           severity: low
-          minimumDuration: 17600h
+          minimumDuration: 176000h
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
-  name: certificate-placement-binding-test1
+  name: certificate-placement-binding-tst
   namespace: rhacm-policies
 placementRef:
-  name: cluster-test1
+  name: cluster-tst
   kind: PlacementRule
   apiGroup: apps.open-cluster-management.io
 subjects:
-- name: policy-certificate
+- name: policy-certificate-tst
   kind: Policy
   apiGroup: policy.open-cluster-management.io

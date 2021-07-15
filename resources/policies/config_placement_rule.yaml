@@ -1,7 +1,7 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: cluster-test1
+  name: cluster-tst
   namespace: rhacm-policies
 spec:
   clusterConditions:
@@ -12,4 +12,4 @@ spec:
       - key: cluster
         operator: In
         values: 
-        - "test1"
+        - "tst"

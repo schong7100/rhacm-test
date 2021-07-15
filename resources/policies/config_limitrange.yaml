@@ -23,7 +23,7 @@ spec:
             - default
             - multicluster-endpoint
             include:
-            - '*'
+            - acm-demo*
           object-templates:
             - complianceType: musthave
               objectDefinition:
