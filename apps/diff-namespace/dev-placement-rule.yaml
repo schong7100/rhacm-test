@@ -7,3 +7,4 @@ spec:
   clusterSelector:
     matchLabels:
       cluster: tst
+      environment: dev
