@@ -54,5 +54,5 @@ spec:
       from:
         kind: ImageStreamTag
         name: eap72-samples:latest
-        namespace: eap72-samples
+        namespace: acm-demo-user1
     type: ImageChange
